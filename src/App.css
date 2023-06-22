@@ -16,7 +16,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 4vmin);
+  font-size: calc(10px + 3vmin);
   color: lightblue;
 }
 

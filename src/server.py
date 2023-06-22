@@ -18,7 +18,7 @@ def prospect():
 
 @app.route("/similar")
 def similar():
-    return jsonify({"name": "hi", "ras": "hi"})
+    return {"members": ["Member1", "Member2", "Member3"]}
 
 if __name__ == "__main__":
     app.run(debug=True)

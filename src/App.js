@@ -1,11 +1,13 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function App() {
-  const [data, setData] = useState([{}])
+  const [data, setData] = useState({})
+  const navigate = useNavigate();
 
   useEffect(() =>{
-    fetch("/similar").then(
+    fetch("http://localhost:5000/similar").then(
       res => res.json()
     ).then(
       data => {
@@ -16,7 +18,7 @@ function App() {
   }, []
   )
 
-  function handleSubmit(e){
+  function HandleSubmit(e){
     e.preventDefault();
     const form = e.target
     const formData = new FormData(form);
@@ -24,6 +26,7 @@ function App() {
     .then(response => response.json())
     .then(data => {
       console.log(data);
+      navigate('/result')
     })
     .catch(error => {
       console.error(error);
@@ -38,7 +41,7 @@ function App() {
       <body className='App-body'>
       
         <p>Enter the Name, Position, RAS <a target="_blank" and rel="noopener noreferrer" href="https://ras.football/ras-calculator/">(Raw Athletic Score)</a>, and College of a prospect and we will predict their future success in the NFL! </p>
-        <form method="post" onSubmit={handleSubmit} className='form'>
+        <form method="post" onSubmit={HandleSubmit} className='form'>
           <label> Name: <input name = "playerName" defaultValue="Tom Brady" /></label>
           <label> College:  <input name = "college" defaultValue="University of Southern California" /> </label>
           <label> Position: 
