@@ -5,5 +5,7 @@ input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONL
 type Player @model {
   id: ID!
   name: String!
-  rating: Float!
+  position: String!
+  ras: Float!
+  college: String!
 }

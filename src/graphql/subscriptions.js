@@ -6,7 +6,9 @@ export const onCreatePlayer = /* GraphQL */ `
     onCreatePlayer(filter: $filter) {
       id
       name
-      rating
+      position
+      ras
+      college
       createdAt
       updatedAt
       __typename
@@ -18,7 +20,9 @@ export const onUpdatePlayer = /* GraphQL */ `
     onUpdatePlayer(filter: $filter) {
       id
       name
-      rating
+      position
+      ras
+      college
       createdAt
       updatedAt
       __typename
@@ -30,7 +34,9 @@ export const onDeletePlayer = /* GraphQL */ `
     onDeletePlayer(filter: $filter) {
       id
       name
-      rating
+      position
+      ras
+      college
       createdAt
       updatedAt
       __typename

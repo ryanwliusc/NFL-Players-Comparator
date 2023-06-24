@@ -5,5 +5,15 @@ export type AmplifyDependentResourcesAttributes = {
       "GraphQLAPIIdOutput": "string",
       "GraphQLAPIKeyOutput": "string"
     }
+  },
+  "storage": {
+    "players": {
+      "Arn": "string",
+      "Name": "string",
+      "PartitionKeyName": "string",
+      "PartitionKeyType": "string",
+      "Region": "string",
+      "StreamArn": "string"
+    }
   }
 }

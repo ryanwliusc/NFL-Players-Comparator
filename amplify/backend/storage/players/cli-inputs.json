@@ -1,0 +1,10 @@
+{
+  "resourceName": "players",
+  "tableName": "qbs",
+  "partitionKey": {
+    "fieldName": "name",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}

@@ -6,10 +6,9 @@ export const getPlayer = /* GraphQL */ `
     getPlayer(id: $id) {
       id
       name
-      rating
-      createdAt
-      updatedAt
-      __typename
+      position
+      ras
+      college
     }
   }
 `;
@@ -23,10 +22,9 @@ export const listPlayers = /* GraphQL */ `
       items {
         id
         name
-        rating
-        createdAt
-        updatedAt
-        __typename
+        position
+        ras
+        college
       }
       nextToken
       __typename

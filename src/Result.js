@@ -1,21 +1,10 @@
 import './App.css';
 import React, { useState, useEffect } from 'react'
+import {useLocation} from 'react-router-dom';
 
 const Result = () => {
-  const [data, setData] = useState([{}])
-
-  useEffect(() =>{
-    fetch("/prospect").then(
-      res => res.json()
-    ).then(
-      data => {
-        setData(data)
-        console.log(data)
-      }
-    )
-  }, []
-  )
-
+  const { state } = useLocation();
+  const data = state;
   return (
     <div className="App">
       <header className="App-header">
@@ -23,18 +12,9 @@ const Result = () => {
         
       </header>
       <body className='App-body'>
-      {(typeof data.members === 'undefined') ? (
-          <p>Loading.....</p>
-        ) : (
-          data.members.map((member, i) => (
-            <p key ={i}>{member}</p>
-          ))
-        )}
+        <p> {data}</p>
+        <a href = "http://localhost:3000">Return to start</a>
       </body>
-      <footer className='App-footer'>
-      <a href = "http://localhost:3000">Return to start</a>
-        
-      </footer>
     </div>
   );
 }

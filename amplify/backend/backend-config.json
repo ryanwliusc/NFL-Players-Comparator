@@ -16,5 +16,12 @@
       "providerPlugin": "awscloudformation",
       "service": "AppSync"
     }
+  },
+  "function": {},
+  "storage": {
+    "players": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
   }
 }

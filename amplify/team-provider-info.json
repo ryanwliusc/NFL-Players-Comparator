@@ -12,6 +12,9 @@
       "AmplifyAppId": "d1n671feursei2"
     },
     "categories": {
+      "storage": {
+        "players": {}
+      },
       "api": {
         "nflsuccesspredictor": {}
       }

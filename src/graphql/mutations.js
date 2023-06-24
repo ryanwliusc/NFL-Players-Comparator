@@ -9,7 +9,9 @@ export const createPlayer = /* GraphQL */ `
     createPlayer(input: $input, condition: $condition) {
       id
       name
-      rating
+      position
+      ras
+      college
       createdAt
       updatedAt
       __typename
@@ -24,7 +26,9 @@ export const updatePlayer = /* GraphQL */ `
     updatePlayer(input: $input, condition: $condition) {
       id
       name
-      rating
+      position
+      ras
+      college
       createdAt
       updatedAt
       __typename
@@ -39,7 +43,9 @@ export const deletePlayer = /* GraphQL */ `
     deletePlayer(input: $input, condition: $condition) {
       id
       name
-      rating
+      position
+      ras
+      college
       createdAt
       updatedAt
       __typename
