@@ -147,7 +147,7 @@ function App() {
         
       </body>
       <footer className="App-footer">
-        {(state === "undefined") ? (
+        {(!state) ? (
           <h3>No Previous Prospects Entered </h3>
         ) : (
           <div>
